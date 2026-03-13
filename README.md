@@ -1,5 +1,6 @@
-Point an AI agent at your codebase. Wake up to a better one.
+autoresearch-skill
 
+Point an AI agent at your codebase. Wake up to a better one.
 An open-source Claude Skill that brings Karpathy's autoresearch pattern to any project with a measurable optimization target. It scans your code, finds what can be improved autonomously, scaffolds the entire experiment loop, and optionally kicks it off.
 Works with Claude Code, Claude.ai, and the Claude API.
 What it does
@@ -59,22 +60,33 @@ Done — say "find things to optimize" in any chat
 
 Claude Code
 Option A: Plugin marketplace
-bash/plugin marketplace add YOUR_GITHUB_USERNAME/autoresearch-skill
+bash/plugin marketplace add EliMunkey/autoresearch-skill
 Option B: Manual install
-bashgit clone https://github.com/YOUR_GITHUB_USERNAME/autoresearch-skill.git
+bashgit clone https://github.com/EliMunkey/autoresearch-skill.git
 cp -r autoresearch-skill ~/.claude/skills/autoresearch
-Claude API
-See the Skills API Quickstart for how to use skills programmatically.
-Usage
+```
+
+### Claude API
+
+See the [Skills API Quickstart](https://docs.anthropic.com/en/docs/agents-and-tools/skills) for how to use skills programmatically.
+
+## Usage
+
 Just describe what you want. The skill triggers automatically:
+```
 "Find things to optimize in this project"
 "Run autoresearch on this codebase"
 "Can an agent improve my search algorithm overnight?"
 "Set up autonomous optimization for my training script"
 "Optimize my system prompt with autoresearch"
+```
+
 The skill will scan, rank, scaffold, and offer to start. You stay in control of what gets optimized and when the loop begins.
-How the loop works
+
+## How the loop works
+
 Once scaffolded, the experiment loop follows Karpathy's pattern:
+```
 ┌─────────────────────────────────────────┐
 │  1. THINK                               │
 │     Review past results, propose idea   │
